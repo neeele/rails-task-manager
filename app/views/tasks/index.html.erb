@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Tasks</h1>
+
+  <ul>
+  <% @tasks.each do |task| %>
+    <li><input type="checkbox"><%= link_to task.title, task_path(task.id) %> | <%= task.details %></li>
+  <% end %>
+</ul>
+</body>
+</html>
+
+<!-- class: "glyphicon glyphicon-trash"-->
